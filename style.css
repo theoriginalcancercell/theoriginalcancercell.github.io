@@ -1,0 +1,82 @@
+* {box-sizing: border-box;}
+		
+		body { 
+		  margin: 0;
+		  font-family: Arial, Helvetica, sans-serif;
+		  background-color: white;
+		  vertical-align: middle;
+		}
+
+		.parallax{
+			background-image: url("raven_soul_of_the_raven_art_full_image.png");
+
+			height: 50%;
+
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+
+			z-index: -1;
+		}
+
+		hr {
+		  border-top: 2px solid gray;
+		}
+
+		
+		.header {
+		  overflow: hidden;
+		  background-color: white;
+		  padding: 10px 5px;
+		  vertical-align: middle;
+		}
+		
+		.header a {
+		  float: left;
+		  color: black;
+		  text-align: center;
+		  padding: 15px;
+		  text-decoration: none;
+		  font-size: 26px; 
+		  vertical-align: middle;
+		  line-height: 15px;
+		  border-radius: 4px;
+		  margin: 0px;
+		  max-block-size: 80px;
+		}
+		
+		.header a.logo {
+		  font-size: 25px;
+		  font-weight: bold;
+		  display: block;
+		  padding: 3px;
+		  line-height: 70px;
+		}
+		
+		.header a:hover {
+		  background-color: gray;
+		  color: black;
+		}
+		
+		.header a.active {
+		  background-color: dodgerblue;
+		  color: white;
+		}
+		
+		.header-right {
+		  float: right;
+		  padding-top: 15px;
+		}
+		
+		@media screen and (max-width: 500px) {
+		  .header a {
+			float: none;
+			display: block;
+			text-align: left;
+		  }
+		  
+		  .header-right {
+			float: none;
+          }
+		}
