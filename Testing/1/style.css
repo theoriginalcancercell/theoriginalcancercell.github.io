@@ -1,0 +1,127 @@
+*{
+	margin: 0;
+	padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+html{
+  --border: 20px;
+  --center: translate(-50%,-50%);
+  --buttonSize: 50px;
+}
+
+@keyframes spin { 100% {transform: rotate(360deg); } }
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; 
+  overflow-y: hidden;
+}
+.centerCircle {
+  height: 100px;
+  width: 100px;
+  background-color: #000000;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  transition: .5s;
+}
+.centerCircle:hover {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  height: 120px;
+  width: 120px;
+  cursor: pointer;
+}
+.centerCircle h1 {
+  color: rgb(165, 150, 164);
+  display: flex;
+  justify-content: center;
+  padding-top: 30%;
+}
+.dropdown{
+  min-width: 200px;
+  min-height: 50px;
+  position: absolute;
+  transform: scale(0%);
+  top: 50px;
+  visibility: hidden;
+  transition: .5s;
+  cursor: default;
+}
+
+.centerCircle:focus-within {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  height: 120px;
+  width: 120px;
+}
+.centerCircle:focus-within .dropdown{
+  transform: scale(100%) translateY(80px);
+  visibility: visible;
+}
+#button {
+  height: var(--buttonSize);
+  width: var(--buttonSize);
+  border-radius: 50%;
+  background-color: #000000;
+  margin: 5px;
+  display: inline-flex;
+	position: relative;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(247, 57, 255, 0.2),rgba(24, 8, 24, 0.2)),url(images/homeBackground.png);
+  overflow: hidden;
+}
+.ring1 {
+  height: 400px;
+  width: 400px;
+  border-color: transparent;
+  border-radius: 50%;
+  border: var(--border) solid;
+  animation: spin 10s linear infinite;
+  pointer-events: none;
+  position: absolute;
+}
+.ring2 {
+  height: 600px;
+  width: 600px;
+  border-color: transparent;
+  border-radius: 50%;
+  border: var(--border) solid;
+  animation: spin 15s linear infinite;
+  pointer-events: none;
+  position: absolute;
+}
+.ring3 {
+  height: 800px;
+  width: 800px;
+  border-color: transparent;
+  border-radius: 50%;
+  border: var(--border) solid;
+  animation: spin 20s linear infinite;
+  pointer-events: none;
+  position: absolute;
+}
+.planet{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  transform: var(--center) translate(260px, 0);
+  /*transition: 0.5s;*/
+  
+}
+/*.planet:hover{
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+}*/
